@@ -5,7 +5,6 @@ import me.patrick.model.account.Account;
 
 import java.lang.reflect.Type;
 import java.util.Collection;
-import java.util.List;
 
 public class AccountListSerializer implements JsonSerializer<Collection<Account>> {
 
@@ -18,7 +17,7 @@ public class AccountListSerializer implements JsonSerializer<Collection<Account>
             JsonObject accountObject = new JsonObject();
 
             accountObject.addProperty("name", account.getName());
-            accountObject.addProperty("user_id", account.getId());
+            accountObject.addProperty("user_id", account.getUserId());
             accountObject.addProperty("balance", account.getBalance());
 
             // add to the json object

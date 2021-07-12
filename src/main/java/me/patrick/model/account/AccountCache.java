@@ -8,7 +8,6 @@ import me.patrick.json.serializer.AccountListSerializer;
 import me.patrick.model.Cache;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
