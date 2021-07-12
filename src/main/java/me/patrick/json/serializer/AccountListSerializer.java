@@ -4,19 +4,16 @@ import com.google.gson.*;
 import me.patrick.model.account.Account;
 
 import java.lang.reflect.Type;
+import java.util.Collection;
 import java.util.List;
 
-public class AccountListSerializer implements JsonSerializer<List<Account>> {
-
-    private final Gson gson = new Gson();
+public class AccountListSerializer implements JsonSerializer<Collection<Account>> {
 
     @Override
-    public JsonElement serialize(List<Account> src, Type typeOfSrc, JsonSerializationContext context) {
+    public JsonElement serialize(Collection<Account> src, Type typeOfSrc, JsonSerializationContext context) {
         JsonObject object = new JsonObject();
 
-        System.out.println("----");
         for (Account account : src) {
-            System.out.println("Serializing account = " + account.getName());
             // create json object for the account
             JsonObject accountObject = new JsonObject();
 
@@ -26,11 +23,7 @@ public class AccountListSerializer implements JsonSerializer<List<Account>> {
 
             // add to the json object
             object.add(account.getId(), accountObject);
-
-            System.out.println("Serialized account -> " + accountObject.getAsString());
         }
-        System.out.println("----");
-        System.out.println("object = " + object);
 
         return object;
     }

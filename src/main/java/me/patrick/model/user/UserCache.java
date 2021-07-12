@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserCache extends Cache<String, User> {
@@ -51,8 +52,9 @@ public class UserCache extends Cache<String, User> {
 
     @Override
     public void save() {
+        String json = gson.toJson(new ArrayList<>(map.values()), listType);
         try {
-            gson.toJson(map.values(), new FileWriter(usersFile));
+            Files.writeString(usersFile.toPath(), json);
         } catch (IOException e) {
             e.printStackTrace();
         }

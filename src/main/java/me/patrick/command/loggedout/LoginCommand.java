@@ -26,7 +26,7 @@ public class LoginCommand extends LoggedOutCommand {
         User applicable = kioskContext.getUserCache().getByUsername(username);
 
         // compare passwords
-        if (!applicable.getPassword().equals(password)) {
+        if (applicable == null || !applicable.getPassword().equals(password)) {
             System.out.println("Incorrect Username/Password");
             return;
         }

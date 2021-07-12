@@ -52,8 +52,9 @@ public class AccountCache extends Cache<String, Account> {
 
     @Override
     public void save() {
+        String json = gson.toJson(new ArrayList<>(map.values()), listType);
         try {
-            gson.toJson(new ArrayList<>(map.values()), new FileWriter(accountsFile));
+            Files.writeString(accountsFile.toPath(), json);
         } catch (IOException e) {
             e.printStackTrace();
         }
