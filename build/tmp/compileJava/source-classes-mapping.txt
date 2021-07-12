@@ -6,16 +6,17 @@ me/patrick/model/user/User.java
  me.patrick.model.user.User
 me/patrick/json/deserializer/UserListDeserializer.java
  me.patrick.json.deserializer.UserListDeserializer
-me/patrick/command/loggedin/GetBalanceCommand.java
- me.patrick.command.loggedin.GetBalanceCommand
+me/patrick/json/serializer/AccountListSerializer.java
+ me.patrick.json.serializer.AccountListSerializer
 me/patrick/json/serializer/UserListSerializer.java
  me.patrick.json.serializer.UserListSerializer
 me/patrick/model/Cache.java
  me.patrick.model.Cache
 me/patrick/command/Command.java
  me.patrick.command.Command
-me/patrick/kiosk/Kiosk.java
- me.patrick.kiosk.Kiosk
+me/patrick/model/account/AccountCache.java
+ me.patrick.model.account.AccountCache
+ me.patrick.model.account.AccountCache$1
 me/patrick/Main.java
  me.patrick.Main
 me/patrick/command/loggedin/DepositCommand.java
@@ -35,8 +36,7 @@ me/patrick/command/loggedin/LogoutCommand.java
  me.patrick.command.loggedin.LogoutCommand
 me/patrick/kiosk/KioskContext.java
  me.patrick.kiosk.KioskContext
-me/patrick/model/account/AccountCache.java
- me.patrick.model.account.AccountCache
- me.patrick.model.account.AccountCache$1
-me/patrick/json/serializer/AccountListSerializer.java
- me.patrick.json.serializer.AccountListSerializer
+me/patrick/command/loggedin/GetBalanceCommand.java
+ me.patrick.command.loggedin.GetBalanceCommand
+me/patrick/kiosk/Kiosk.java
+ me.patrick.kiosk.Kiosk
